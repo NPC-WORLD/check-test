@@ -4,6 +4,7 @@
   --color-brand-dark: #465929;
   --color-brand-light: #819b57;
 }
+
 /* Base */
 body {
   color: var(--color-primary-dark);
@@ -11,6 +12,21 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0; /* Убираем автоматически добавленные браузером отступы */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0; /* Убираем автоматически добавленные браузером верхние отступы, потому что с нижними отступами надо будет ещё работать  */
 }
 
 address {
@@ -21,6 +37,26 @@ ul {
   list-style-type: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.container {
+  width: 100%; /* Ширина контейнера */
+  max-width: 1288px; /* Ширина контента + 48px, потому что box-sitizing:border box, не входят в эту ширину */
+  margin: 0 auto; /* Центрируем контент */
+  padding: 0 24px; /* Отступы от краёв контейнера, чтобы не прилипали */
+}
+
 /* Button */
 .button {
   color: var(--color-primary-light);
@@ -29,6 +65,7 @@ ul {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  padding: 16px 32px; /* Внутренние отступы */
 }
 
 .button:hover {
@@ -48,7 +85,13 @@ ul {
 }
 
 /* Hero section */
+
+.hero-section {
+  padding: 272px 0;
+}
+
 .hero-title {
+  margin-bottom: 0;
   color: var(--color-primary-light);
   text-align: center;
   font-size: 128px;
@@ -81,6 +124,13 @@ ul {
 }
 
 /* Traditions-section */
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-title {
+  margin-bottom: 42px;
+}
+
 .traditions-text .brand {
   color: var(--color-brand-light);
   font-weight: 600;
@@ -92,12 +142,21 @@ ul {
 
 /* Chefs-section */
 
+.chefs-title {
+  margin-bottom: 80px;
+}
+
 .chef-title {
   font-weight: 600;
   font-size: 40px;
+  margin-bottom: 16px;
 }
 
 /* Formats section */
+.formats-title {
+  margin-bottom: 80px;
+}
+
 .format-title {
   font-weight: 600;
   font-size: 24px;
@@ -106,6 +165,11 @@ ul {
 .format-text {
   font-weight: 300;
   font-size: 14px;
+}
+
+/* Contacts-section */
+.contacts-title {
+  margin-bottom: 16px;
 }
 
 /* Footer */
