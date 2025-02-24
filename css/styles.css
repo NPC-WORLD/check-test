@@ -34,6 +34,8 @@ address {
 }
 
 ul {
+  padding: 0; /* Убираем автоматически добавленные браузером отступы */
+  margin: 0; /* Убираем автоматически добавленные браузером отступы */
   list-style-type: none;
 }
 
@@ -81,7 +83,33 @@ ul {
 
 .link:hover {
   color: var(--color-brand-light);
-  font-weight: 600;
+  /* font-weight: 600; */ /* Если нужно, чтобы при наведении текст становился жирным */
+}
+
+/* Header */
+
+.header {
+  background-color: lightgray;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Расстояние между элементами */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
+  gap: 40px; /* Расстояние между элементами */
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px; /* Расстояние между элементами */
+  flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
+  justify-content: center; /* Выравниваем пункты меню по центру */
 }
 
 /* Hero section */
@@ -103,12 +131,20 @@ ul {
 }
 
 /* Advantages section */
-.advantages-list {
+
+.advantages-section {
   background-color: var(--color-brand-light);
-  color: var(--color-primary-light);
+  padding: 16px 0;
+}
+
+.advantages-list {
+  display: flex; /* Располагаем элементы в строку */
+  justify-content: space-between; /* Распределяем элементы по ширине */
+  gap: 40px; /* Расстояние между элементами */
 }
 
 .advantages-item {
+  color: var(--color-primary-light);
   font-weight: 300;
   font-size: 20px;
 }
@@ -124,9 +160,21 @@ ul {
 }
 
 /* Traditions-section */
+
 .traditions-section {
   padding-top: 96px;
 }
+
+.traditions-container {
+  display: flex; /* Располагаем элементы в строку */
+  justify-content: space-between; /* Распределяем элементы по ширине */
+  gap: 40px; /* Расстояние между элементами */
+}
+
+.traditions-content {
+  max-width: 710px; /* Максимальная ширина контента */
+}
+
 .traditions-title {
   margin-bottom: 42px;
 }
@@ -138,6 +186,10 @@ ul {
 
 .traditions-text .uppercase {
   text-transform: uppercase;
+}
+
+.traditions-text.limited {
+  max-width: 340px; /* Максимальна ширина текста по полам, чтобы текст сам перемещался на другое строку без тега <br> */
 }
 
 /* Chefs-section */
@@ -153,6 +205,26 @@ ul {
 }
 
 /* Formats section */
+
+.formats-list {
+  display: flex; /* Располагаем элементы в строку */
+  gap: 20px; /* Расстояние между элементами */
+  flex-wrap: wrap;
+}
+
+.formats-item {
+  display: flex; /* Располагаем элементы в строку */
+  flex-basis: calc(
+    (100% - 40px) / 3
+  ); /* Ширина элемента 100 процентов минус 40 gap 20+20 расстояние между карточками */
+}
+
+.format-card {
+  padding: 24px; /* Внутренние отступы */
+  border-radius: 16px; /* Скругляем углы */
+  border: 1px solid lightgray; /* Remove потом рамку */
+}
+
 .formats-title {
   margin-bottom: 80px;
 }
