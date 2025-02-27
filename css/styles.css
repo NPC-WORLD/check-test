@@ -209,7 +209,7 @@ ul {
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-decor-dark);
+    -16px 16px 0 2px var(--color-decor-dark); /* Тень */
 }
 
 .chefs-title {
@@ -273,6 +273,34 @@ ul {
   font-size: 14px;
 }
 
+/* Carousel */
+
+.carousel-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* Скругляем углы в круг */
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  padding: 0;
+  cursor: pointer;
+  display: flex; /* Располагаем элементы в строку */
+  align-items: center; /* Выравниваем по центру */
+  justify-content: center; /* Выравниваем по центру */
+  /* fill: var(--color-primary-dark); Цвет иконки будет насследоваться от родителя */
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.carousel-button:hover .carousel-arrow {
+  fill: var(--color-primary-light);
+}
+
+.carousel-arrow {
+  fill: var(--color-primary-dark);
+}
+
 /* Contacts-section */
 .contacts-title {
   margin-bottom: 16px;
@@ -296,6 +324,14 @@ ul {
 
 .address-link:hover {
   color: var(--color-brand-light);
+}
+
+.address-icon {
+  fill: var(--color-primary-light);
+}
+
+.address-icon:hover {
+  fill: var(--color-brand-light);
 }
 
 .address-copyright {
