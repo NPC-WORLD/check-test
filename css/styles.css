@@ -8,6 +8,10 @@
 }
 
 /* Base */
+
+a {
+  display: inline-block; /* Блочный элемент, чтобы можно было задать ширину и высоту */
+}
 body {
   color: var(--color-primary-dark);
   font-family: 'Poppins', sans-serif;
@@ -18,7 +22,9 @@ body {
   background-color: var(--color-primary-light);
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -225,6 +231,31 @@ ul {
   border: 2px solid var(--color-decor-light);
 }
 
+.chef-card {
+  display: flex; /* Располагаем элементы в строку */
+  gap: 30px; /* Расстояние между элементами */
+}
+
+.chefs-list {
+  display: flex; /* Располагаем элементы в строку */
+  gap: 40px 30px; /* Расстояние между элементами вверх-вниз и влево-вправо*/
+  flex-wrap: wrap; /* Перенос элементов на новую строку */
+}
+
+.chefs-item {
+  flex-basis: calc(
+    (100% - 30px) / 2
+  ); /* Ширина элемента 100 процентов минус 30 gap расстояние между карточками */
+}
+
+.chef-text p {
+  margin-bottom: 24px; /* Отступ снизу у параграфа */
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0; /* Убираем нижний отступ у последнего параграфа */
+}
+
 .chef-title {
   font-weight: 600;
   font-size: 40px;
@@ -232,6 +263,12 @@ ul {
 }
 
 /* Formats section */
+
+.formats-container {
+  display: flex; /* Располагаем элементы в строку */
+  gap: 32px;
+  align-items: center;
+}
 
 .formats-list {
   display: flex; /* Располагаем элементы в строку */
@@ -287,6 +324,7 @@ ul {
   align-items: center; /* Выравниваем по центру */
   justify-content: center; /* Выравниваем по центру */
   /* fill: var(--color-primary-dark); Цвет иконки будет насследоваться от родителя */
+  flex-shrink: 0; /* Запрещаем уменьшение размера */
 }
 
 .carousel-button:hover {
@@ -302,11 +340,57 @@ ul {
 }
 
 /* Contacts-section */
+
+.contacts-section {
+  padding-bottom: 96px; /* Отступ снизу */
+}
+
+.contacts-container {
+  display: flex; /* Располагаем элементы в строку */
+  gap: 32px; /* Расстояние между элементами */
+}
+
+.contacts-map {
+  flex-shrink: 0; /* Запрещаем уменьшение размера */
+  border: none; /* Убираем рамку */
+  border-radius: 16px; /* Скругляем углы */
+}
+
 .contacts-title {
   margin-bottom: 16px;
 }
 
 /* Footer */
+
+.footer {
+  padding: 32px 0; /* Внутренние отступы */
+}
+
+.footer-container {
+  display: flex; /* Располагаем элементы в строку */
+  gap: 20px; /* Расстояние между элементами */
+}
+
+.footer-nav,
+.footer-address {
+  display: flex; /* Располагаем элементы в строку */
+  flex-basis: 50%; /* Ширина элемента 50 процентов */
+  gap: 20px; /* Расстояние между элементами */
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1; /* Растягиваем лого на всё доступное пространство, можно так же использовать свойство flex-basis: 50% */
+}
+
+.address-list {
+  flex-grow: 1; /* Растягиваем адрес на всё доступное пространство */
+}
+
+.address-info {
+  display: block; /* Располагаем элементы в столбец но можно и не писать, потому что эти свойства переходят от footer-address */
+  flex-grow: 1; /* Растягиваем информацию на всё доступное пространство */
+}
 
 .footer {
   background-color: var(--color-primary-dark);
