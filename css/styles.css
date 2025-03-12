@@ -62,7 +62,7 @@ ul {
 }
 
 .container {
-  width: 100%; /* Ширина контейнера */
+  width: 100%; /* Занимает всю доступную ширину родительского элемента */
   max-width: 1288px; /* Ширина контента + 48px, потому что box-sitizing:border box, не входят в эту ширину */
   margin: 0 auto; /* Центрируем контент */
   padding: 0 24px; /* Отступы от краёв контейнера, чтобы не прилипали */
@@ -102,14 +102,14 @@ ul {
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
+  display: flex; /* Располагаем элементы в строку */
+  align-items: center; /* Выравниваем элементы по центру */
   gap: 40px; /* Расстояние между элементами */
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
+  display: flex; /* Располагаем элементы в строку */
+  align-items: center; /* Выравниваем элементы по центру */
   flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
   gap: 40px; /* Расстояние между элементами */
 }
@@ -219,16 +219,26 @@ ul {
 }
 
 .chefs-title {
+  position: relative; /* Позиционирование относительно родителя */
   margin: 0 auto 80px; /* Отступ сверху 0, слева и справа auto, снизу 80  */
-  max-width: 532px; /* Максимальная ширина заголовка */ /* изменить потом на 520, потому что шрифт Poppins не поддерживает укр язык  */
+  /* max-width: 532px; Максимальная ширина заголовка изменить потом на 520, потому что шрифт Poppins не поддерживает укр язык  */
 }
 
 .chefs-title::after,
 .chefs-title::before {
+  bottom: 24px; /* Отступ снизу */
+  position: absolute; /* Абсолютное позиционирование, автоматические становится блоком*/
   content: ''; /* Добавляем контент */
-  display: block;
   width: 352px; /* Для декоративных линий */
   border: 2px solid var(--color-decor-light);
+}
+
+.chefs-title::before {
+  left: 0; /* Отступ слева размер линии + 8 px расстояние между заголовком и линиями*/
+}
+
+.chefs-title::after {
+  right: 0; /* Отступ слева размер линии + 8 px расстояние между заголовком и линиями*/
 }
 
 .chef-card {
@@ -273,7 +283,7 @@ ul {
 .formats-list {
   display: flex; /* Располагаем элементы в строку */
   gap: 20px; /* Расстояние между элементами */
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Перенос элементов на новую строку */
 }
 
 .formats-item {
@@ -362,10 +372,6 @@ ul {
 
 /* Footer */
 
-.footer {
-  padding: 32px 0; /* Внутренние отступы */
-}
-
 .footer-container {
   display: flex; /* Располагаем элементы в строку */
   gap: 20px; /* Расстояние между элементами */
@@ -393,6 +399,8 @@ ul {
 }
 
 .footer {
+  padding: 32px 0; /* Внутренние отступы */
+  position: relative; /* Позиционирование относительно родителя */
   background-color: var(--color-primary-dark);
   background-image: url('../images/footer-background.png');
   background-repeat: no-repeat;
@@ -420,4 +428,64 @@ ul {
 
 .address-copyright {
   font-size: 14px;
+}
+
+.footer::before,
+.footer::after {
+  content: '';
+  position: absolute; /* Абсолютное позиционирование */
+  background-repeat: no-repeat; /* Повторение фона */
+  bottom: 0; /* Отступ снизу */
+}
+
+.footer::before {
+  width: 180px; /* Ширина декоративного элемента */
+  height: 120px; /* Высота декоративного элемента */
+  background-image: url(../images/decor-bread-small.png);
+  left: 0; /* Отступ слева */
+  /* background-size: auto; Размер фона */
+}
+
+.footer::after {
+  width: 380px; /* Ширина декоративного элемента */
+  height: 190px; /* Высота декоративного элемента */
+  right: 0; /* Отступ справа */
+  background-image: url(../images/decor-bread-large.png);
+}
+
+/* Modal window */
+
+.backdrop {
+  /* Фон модального окна*/
+  display: flex; /* Располагаем элементы в строку */
+  align-items: center; /* Выравниваем элементы по центру */
+  justify-content: center; /* Выравниваем элементы по центру */
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0; /* Отступ сверху */
+  bottom: 0; /* Отступ снизу */
+  left: 0; /* Отступ слева */
+  right: 0; /* Отступ справа */
+  background-color: rgb(0, 0, 0, 0.5); /* Цвет фона */
+}
+
+.backdrop.is-hidden {
+  /* Скрываем фон модального окна после закрытия */
+  display: none; /* Скрываем модальное окно */
+  opacity: 0; /* Прозрачность */
+  visibility: none; /* Невидимость */
+  pointer-events: none; /* Отключаем события мыши */
+}
+
+.modal-window {
+  position: relative; /* Позиционирование относительно родителя */
+  width: 880px; /* Ширина модального окна */
+  height: 880px; /* Высота модального окна */
+  background-color: var(--color-primary-light); /* Цвет фона */
+  border-radius: 32px; /* Скругляем углы */
+}
+
+.modal-btn-close {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 40px; /* Отступ сверху */
+  right: 40px; /* Отступ справа */
 }
