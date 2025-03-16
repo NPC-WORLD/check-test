@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url(../fonts/Gilroy-Medium.woff2) format ('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
@@ -506,10 +513,66 @@ ul {
   max-height: 880px; /* Высота модального окна */
   background-color: var(--color-primary-light); /* Цвет фона */
   border-radius: 32px; /* Скругляем углы */
+  padding: 128px; /* Внутренние отступы */
+  overflow-y: auto; /* Появление скроллбара */
 }
 
 .modal-btn-close {
   position: absolute; /* Абсолютное позиционирование */
   top: 40px; /* Отступ сверху */
   right: 40px; /* Отступ справа */
+}
+
+/* Form */
+
+.form-field {
+  margin-bottom: 32px; /* Отступ снизу */
+}
+
+.form-label {
+  display: block; /* Блочный элемент */
+}
+.form-input {
+  padding: 16px 42px; /* Внутренние отступы */
+  width: 100%; /* Ширина элемента */
+  border: 1px solid var(--color-decor-dark); /* Цвет рамки */
+  border-radius: 8px; /* Скругляем углы */
+  background-color: transparent; /* Прозрачный фон */
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-light); /* Цвет рамки */
+  outline: none; /* Убираем рамку фокуса */
+}
+
+.form-input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-decor-dark);
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-button {
+  display: block; /* Блочный элемент, потому что кнопка не блок*/
+  margin: 0 auto 24px; /* Отступ слева и справа auto, центрируем кнопку*/
+}
+
+.form-policy {
+  margin: 0 auto; /* Отступ слева и справа auto, центрируем текст */
+  max-width: 220px;
+  font-family: 'Griloy', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+.form-policy-link {
+  color: var(--color-primary-dark); /* Цвет текста */
+  text-underline-offset: 2px; /* Отступ текс от линии подчёркивания */
 }
