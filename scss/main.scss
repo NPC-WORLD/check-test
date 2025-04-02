@@ -1,72 +1,12 @@
-@font-face {
-  font-family: 'Gilroy';
-  src: url(../fonts/Gilroy-Medium.woff2) format ('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
+@import './utils/fonts'; /* Импортируем шрифты */
 
-:root {
-  --color-primary-dark: #31261a;
-  --color-primary-light: #faf4ea;
-  --color-brand-dark: #465929;
-  --color-brand-light: #819b57;
-  --color-decor-light: #cfcfbc;
-  --color-decor-dark: #a18268;
-}
+@import './utils/variables'; /* Импортируем переменные */
 
 /* Base */
 
-a {
-  display: inline-block; /* Блочный элемент, чтобы можно было задать ширину и высоту */
-}
-body {
-  color: var(--color-primary-dark);
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0; /* Убираем автоматически добавленные браузером отступы */
-  background-color: var(--color-primary-light);
-}
+@import './base'; /* Импортируем базовые стили */
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0; /* Убираем автоматически добавленные браузером верхние отступы, потому что с нижними отступами надо будет ещё работать  */
-}
-
-address {
-  font-style: normal;
-}
-
-ul {
-  padding: 0; /* Убираем автоматически добавленные браузером отступы */
-  margin: 0; /* Убираем автоматически добавленные браузером отступы */
-  list-style-type: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.section {
-  padding: 48px 0;
-}
+@import './utils/utils'; /* Импортируем утилиты */
 
 .container {
   width: 100%; /* Занимает всю доступную ширину родительского элемента */
@@ -76,158 +16,32 @@ ul {
 }
 
 /* Button */
-.button {
-  color: var(--color-primary-light);
-  background-color: var(--color-brand-light);
-  border: 2px solid var(--color-brand-light);
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  padding: 16px 32px; /* Внутренние отступы */
-}
-
-.button:hover {
-  background-color: var(--color-primary-light);
-  color: var(--color-brand-dark);
-}
+@import './components/buttons'; /* Импортируем кнопки */
 
 /* Link */
-.link {
-  color: var(--color-primary-light);
-  text-decoration: none;
-  transition: color 0.3s; /* Плавное изменение цвета текста */
-}
 
-.link:hover {
-  color: var(--color-brand-light);
-  /* font-weight: 600; */ /* Если нужно, чтобы при наведении текст становился жирным */
-}
+@import './components/links'; /* Импортируем ссылки */
 
 /* Header */
-
-.header {
-  /* background-color: lightgray; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 32px;
-}
-
-.header-container {
-  display: flex; /* Располагаем элементы в строку */
-  align-items: center; /* Выравниваем элементы по центру */
-  gap: 40px; /* Расстояние между элементами */
-}
-
-.header-nav {
-  display: flex; /* Располагаем элементы в строку */
-  align-items: center; /* Выравниваем элементы по центру */
-  flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
-  gap: 40px; /* Расстояние между элементами */
-}
-
-.header-menu {
-  display: flex;
-  gap: 64px; /* Расстояние между элементами */
-  flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
-  justify-content: center; /* Выравниваем пункты меню по центру */
-}
+@import './components/header'; /* Импортируем шапку */
 
 /* Hero section */
 
-.hero-section {
-  padding: 272px 0;
-  background-image: linear-gradient(
-      102.76deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url('../images/hero-section-background.jpg'); /* Путь к изображению */
-  background-repeat: no-repeat; /* Повторение фона */
-  background-position: center top; /* Позиция фона */
-  background-size: cover; /* Размер фона */
-  background-attachment: scroll; /* Фиксация фона */
-}
-
-.hero-title {
-  margin-bottom: 0;
-  color: var(--color-primary-light);
-  text-align: center;
-  font-size: 128px;
-  font-weight: 900;
-}
-
-.hero-title .accent {
-  color: var(--color-brand-light);
-}
+@import './components/hero-section'; /* Импортируем секцию hero */
 
 /* Advantages section */
 
-.advantages-section {
-  background-color: var(--color-brand-light);
-  padding: 16px 0;
-}
+@import './layouts/advantages-section'; /* Импортируем секцию преимуществ */
 
-.advantages-list {
-  display: flex; /* Располагаем элементы в строку */
-  justify-content: space-between; /* Распределяем элементы по ширине */
-  gap: 40px; /* Расстояние между элементами */
-}
-
-.advantages-item {
-  color: var(--color-primary-light);
-  font-weight: 300;
-  font-size: 20px;
-}
-
-.section-title {
-  font-weight: 900;
-  font-size: 64px;
-  line-height: 1.3;
-}
-
-.section-title.centered {
-  text-align: center; /* Выравниваем заголовок по центру */
-}
-
-.section-title .accent {
-  color: var(--color-brand-dark);
-}
+@import './utils/texts'; /* Импортируем текстовые утилиты */
 
 /* Traditions-section */
 
-.traditions-section {
-  padding-top: 96px;
-}
+@import './layouts/traditions-section'; /* Импортируем секцию традиций */
 
-.traditions-container {
-  display: flex; /* Располагаем элементы в строку */
-  justify-content: space-between; /* Распределяем элементы по ширине */
-  gap: 40px; /* Расстояние между элементами */
-}
+/* Section */
 
-.traditions-content {
-  max-width: 710px; /* Максимальная ширина контента */
-}
-
-.traditions-title {
-  margin-bottom: 42px;
-}
-
-.traditions-text .brand {
-  color: var(--color-brand-light);
-  font-weight: 600;
-}
-
-.traditions-text .uppercase {
-  text-transform: uppercase;
-}
-
-.traditions-text.limited {
-  max-width: 340px; /* Максимальна ширина текста по полам, чтобы текст сам перемещался на другое строку без тега <br> */
-}
+@import './layouts/section'; /* Импортируем секцию */
 
 /* Chefs-section */
 
@@ -313,16 +127,14 @@ ul {
 }
 
 .format-card {
+  display: flex; /* Располагаем элементы в строку */
+  flex-direction: column; /* Располагаем элементы в столбец */
+  justify-content: flex-end; /* Выравниваем элементы по низу */
+  position: relative; /* Позиционирование относительно родителя */
   height: 444px; /* Высота карточки */
   padding: 24px; /* Внутренние отступы */
   border-radius: 16px; /* Скругляем углы */
-  border: 1px solid lightgray; /* Remove потом рамку */
-  background-image: linear-gradient(
-    180deg,
-    rgba(49, 38, 26, 0) 55.21%,
-    rgba(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%
-  );
+  overflow: hidden; /* Обрезаем элементы, которые выходят за пределы родителя */
   transition: transform 0.3s;
 }
 
@@ -330,18 +142,48 @@ ul {
   transform: scale(1.05);
 }
 
+.format-card:after {
+  content: ''; /* Добавляем контент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
+  pointer-events: none; /* Чтобы не мешал кликам */
+  z-index: 1; /* Перемещаем элемент на передний план */
+}
+
+.format-image {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Отступ сверху */
+  left: 0; /* Отступ слева */
+  width: 100%; /* Ширина элемента */
+  height: 100%; /* Высота элемента */
+  z-index: 0; /* Перемещаем элемент на задний план */
+}
+
 .formats-title {
   margin-bottom: 80px;
 }
 
 .format-title {
+  color: var(--color-primary-light); /* Цвет текста */
   font-weight: 600;
   font-size: 24px;
+  z-index: 2; /* Перемещаем элемент на передний план */
 }
 
 .format-text {
   font-weight: 300;
   font-size: 14px;
+  color: var(--color-primary-light); /* Цвет текста */
+  z-index: 2; /* Перемещаем элемент на передний план */
 }
 
 /* Carousel */
@@ -389,6 +231,7 @@ ul {
 }
 
 .contacts-map {
+  display: flex; /* Располагаем элементы в строку */
   flex-shrink: 0; /* Запрещаем уменьшение размера */
   border: none; /* Убираем рамку */
   border-radius: 16px; /* Скругляем углы */
@@ -532,6 +375,7 @@ ul {
 .form-label {
   display: block; /* Блочный элемент */
 }
+
 .form-input {
   padding: 16px 42px; /* Внутренние отступы */
   width: 100%; /* Ширина элемента */

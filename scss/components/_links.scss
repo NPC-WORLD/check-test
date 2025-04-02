@@ -1,0 +1,10 @@
+.link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 0.3s; /* Плавное изменение цвета текста */
+}
+
+.link:hover {
+  color: var(--color-brand-light);
+  /* font-weight: 600; */ /* Если нужно, чтобы при наведении текст становился жирным */
+}

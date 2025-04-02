@@ -1,0 +1,23 @@
+.traditions-section {
+  padding-top: 96px;
+
+  &__container {
+    display: flex; /* Располагаем элементы в строку */
+    justify-content: space-between; /* Распределяем элементы по ширине */
+    gap: 40px; /* Расстояние между элементами */
+  }
+
+  &__content {
+    max-width: 710px; /* Максимальная ширина контента */
+  }
+
+  &__title {
+    margin-bottom: 42px;
+  }
+
+  &__text {
+    &--limited {
+      max-width: 340px; /* Максимальна ширина текста по полам, чтобы текст сам перемещался на другое строку без тега <br> */
+    }
+  }
+}

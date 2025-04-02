@@ -1,0 +1,16 @@
+.advantages-section {
+  background-color: var(--color-brand-light);
+  padding: 16px 0;
+
+  &__list {
+    display: flex; /* Располагаем элементы в строку */
+    justify-content: space-between; /* Распределяем элементы по ширине */
+    gap: 40px; /* Расстояние между элементами */
+  }
+
+  &__item {
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
