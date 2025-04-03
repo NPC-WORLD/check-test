@@ -8,11 +8,14 @@
   }
 
   &__content {
+    display: flex; /* Располагаем элементы в строку */
+    flex-direction: column; /* Располагаем элементы в столбец */
+    gap: 42px; /* Расстояние между элементами */
     max-width: 710px; /* Максимальная ширина контента */
   }
 
-  &__title {
-    margin-bottom: 42px;
+  &__image {
+    border-radius: 190px 190px 0 0; /* Полукруг сверху */
   }
 
   &__text {

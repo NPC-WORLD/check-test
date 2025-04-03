@@ -1,0 +1,39 @@
+.backdrop {
+  /* Фон модального окна*/
+  display: flex; /* Располагаем элементы в строку */
+  align-items: center; /* Выравниваем элементы по центру */
+  justify-content: center; /* Выравниваем элементы по центру */
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0; /* Отступ сверху */
+  bottom: 0; /* Отступ снизу */
+  left: 0; /* Отступ слева */
+  right: 0; /* Отступ справа */
+  background-color: rgb(0, 0, 0, 0.5); /* Цвет фона */
+  padding: 20px 0; /* Внутренние отступы */
+  transition: opacity 0.3s, visibility 0.3s; /* Плавное изменение прозрачности */
+}
+
+.backdrop.is-hidden {
+  /* Скрываем фон модального окна после закрытия */
+  opacity: 0; /* Прозрачность */
+  visibility: none; /* Невидимость элемента для браузера */
+  pointer-events: none; /* Отключаем события мыши */
+}
+
+.modal-window {
+  position: relative; /* Позиционирование относительно родителя */
+  width: 100%; /* Ширина модального окна */
+  max-width: 880px; /* Ширина модального окна */
+  height: 100%; /* Высота модального окна */
+  max-height: 880px; /* Высота модального окна */
+  background-color: var(--color-primary-light); /* Цвет фона */
+  border-radius: 32px; /* Скругляем углы */
+  padding: 128px; /* Внутренние отступы */
+  overflow-y: auto; /* Появление скроллбара */
+}
+
+.modal-btn-close {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 40px; /* Отступ сверху */
+  right: 40px; /* Отступ справа */
+}

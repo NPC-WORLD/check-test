@@ -1,0 +1,24 @@
+.formats-section {
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    display: flex; /* Располагаем элементы в строку */
+    gap: 32px;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex; /* Располагаем элементы в строку */
+    gap: 20px; /* Расстояние между элементами */
+    flex-wrap: wrap; /* Перенос элементов на новую строку */
+  }
+
+  &__item {
+    display: flex; /* Располагаем элементы в строку */
+    flex-basis: calc(
+      (100% - 40px) / 3
+    ); /* Ширина элемента 100 процентов минус 40 gap 20+20 расстояние между карточками */
+  }
+}

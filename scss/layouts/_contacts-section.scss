@@ -1,0 +1,19 @@
+.contacts-section {
+  padding-bottom: 96px; /* Отступ снизу */
+
+  &__container {
+    display: flex; /* Располагаем элементы в строку */
+    gap: 32px; /* Расстояние между элементами */
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__map {
+    display: flex; /* Располагаем элементы в строку */
+    flex-shrink: 0; /* Запрещаем уменьшение размера */
+    border: none; /* Убираем рамку */
+    border-radius: 16px; /* Скругляем углы */
+  }
+}
