@@ -242,14 +242,16 @@
               <h2 class="contacts-section__title section__title">
                 Приєднуйся до мережі пекарень
               </h2>
-              <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+              <p class="contacts-section__text">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
               <form name="contact-form" autocomplete="off">
-                <div class="form-field">
-                  <label class="form-label visually-hidden" for="user-name"
+                <div class="contacts-section__form-field input">
+                  <label class="input__label visually-hidden" for="user-name"
                     >Ім'я</label
                   >
                   <input
-                    class="form-input"
+                    class="input__control"
                     id="user-name"
                     type="text"
                     name="user-name"
@@ -258,12 +260,12 @@
                   />
                 </div>
 
-                <div class="form-field">
-                  <label class="form-label visually-hidden" for="user-tel"
+                <div class="contacts-section__form-field input">
+                  <label class="input__label visually-hidden" for="user-tel"
                     >Телефон</label
                   >
                   <input
-                    class="form-input"
+                    class="input__control"
                     id="user-tel"
                     type="tel"
                     name="user-tel"
@@ -272,12 +274,12 @@
                   />
                 </div>
 
-                <div class="form-field">
-                  <label class="form-label visually-hidden" for="user-email"
+                <div class="contacts-section__form-field input">
+                  <label class="input__label visually-hidden" for="user-email"
                     >Електронна пошта</label
                   >
                   <input
-                    class="form-input"
+                    class="input__control"
                     id="user-email"
                     type="email"
                     name="user-email"
@@ -286,12 +288,12 @@
                   />
                 </div>
 
-                <button class="form-button button" type="submit">
+                <button class="contacts-section__button button" type="submit">
                   Замовити дзвінок
                 </button>
                 <p class="form-policy">
                   Натискаючи на кнопку я погоджуюсь
-                  <a class="form-policy-link" href="#"
+                  <a class="form-policy__link" href="#"
                     >з політикою конфіденційності</a
                   >
                 </p>
@@ -375,18 +377,20 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop">
       <div class="modal-window">
-        <button class="modal-btn-close">Close</button>
-        <h2>Замовити дзвінок</h2>
-        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <button class="modal-window__btn-close modal-btn-close">Close</button>
+        <h2 class="modal-window__title">Замовити дзвінок</h2>
+        <p class="modal-window__text">
+          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
+        </p>
         <form name="modal-form" autocomplete="off">
-          <div class="form-field">
-            <label class="form-label visually-hidden" for="user-name"
+          <div class="modal-window__form-field input">
+            <label class="input__label visually-hidden" for="user-name"
               >Ім'я</label
             >
             <input
-              class="form-input"
+              class="input__control"
               id="user-name"
               type="text"
               name="user-name"
@@ -395,12 +399,12 @@
             />
           </div>
 
-          <div class="form-field">
-            <label class="form-label visually-hidden" for="user-tel"
+          <div class="modal-window__form-field input">
+            <label class="input__label visually-hidden" for="user-tel"
               >Телефон</label
             >
             <input
-              class="form-input"
+              class="input__control"
               id="user-tel"
               type="tel"
               name="user-tel"
@@ -409,12 +413,12 @@
             />
           </div>
 
-          <div class="form-field">
-            <label class="form-label visually-hidden" for="user-email"
+          <div class="modal-window__form-field input">
+            <label class="input__label visually-hidden" for="user-email"
               >Електронна пошта</label
             >
             <input
-              class="form-input"
+              class="input__control"
               id="user-email"
               type="email"
               name="user-email"
@@ -423,12 +427,12 @@
             />
           </div>
 
-          <button class="form-button button" type="submit">
+          <button class="modal-window__button button" type="submit">
             Замовити дзвінок
           </button>
           <p class="form-policy">
             Натискаючи на кнопку я погоджуюсь
-            <a class="form-policy-link" href="#"
+            <a class="form-policy__link" href="#"
               >з політикою конфіденційності</a
             >
           </p>

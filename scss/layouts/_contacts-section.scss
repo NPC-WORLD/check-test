@@ -16,4 +16,19 @@
     border: none; /* Убираем рамку */
     border-radius: 16px; /* Скругляем углы */
   }
+
+  &__form-field {
+    margin-bottom: 24px; /* Отступ снизу */
+  }
+
+  &__button {
+    display: block; /* Блочный элемент, потому что кнопка не блок*/
+    margin: 0 auto 16px; /* Отступ слева и справа auto, центрируем кнопку*/
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif; /* Шрифт */
+    margin-bottom: 42px; /* Отступ снизу */
+    color: var(--color-brand-dark); /* Цвет текста */
+  }
 }
