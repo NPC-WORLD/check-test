@@ -1,0 +1,20 @@
+.mobile-menu {
+  position: fixed; /* Фиксируем меню */
+  top: 0; /* Прижимаем к верху */
+  left: 0; /* Прижимаем к левому краю */
+  width: 100%; /* Ширина меню 100% */
+  height: 100%; /* Высота меню 100% */
+  background-color: var(--color-primary-light); /* Цвет фона меню */
+  transform: translateX(100%); /* Сдвигаем меню за пределы экрана */
+  transition: transform 0.3s; /* Плавный переход при открытии и закрытии меню */
+
+  &.is-open {
+    transform: translateX(0); /* Показываем меню */
+  }
+
+  &__btn-close {
+    position: absolute; /* Фиксируем кнопку закрытия */
+    top: 16px; /* Отступ сверху */
+    right: 24px; /* Отступ справа */
+  }
+}

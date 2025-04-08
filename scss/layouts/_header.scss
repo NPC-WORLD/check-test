@@ -3,7 +3,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 32px 0px;
+  padding-top: 16px; /* Отступ сверху */
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 32px; /* Отступ сверху */
+  }
 
   &__container {
     display: flex; /* Располагаем элементы в строку */
@@ -19,9 +23,35 @@
   }
 
   &__menu {
-    display: flex;
-    gap: 64px; /* Расстояние между элементами */
-    flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
-    justify-content: center; /* Выравниваем пункты меню по центру */
+    display: none; /* Скрываем меню на мобильных устройствах */
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px; /* Расстояние между элементами */
+      flex-grow: 1; /* Растягиваем меню на всё доступное пространство */
+      justify-content: center; /* Выравниваем пункты меню по центру */
+    }
+  }
+
+  &__button {
+    display: none; /* Скрываем кнопку на мобильных устройствах */
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block; /* Показываем кнопку на мобильных устройствах */
+    }
+  }
+
+  &__burger {
+    display: block; /* Показываем бургер на мобильных устройствах */
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем рамку */
+    width: 24px; /* Ширина бургера */
+    height: 24px; /* Высота бургера */
+    padding: 0; /* Убираем отступы */
+    fill: var(--color-primary-light); /* Цвет бургера */
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none; /* Скрываем бургер на десктопе */
+    }
   }
 }

@@ -1,10 +1,15 @@
 .traditions-section {
-  padding-top: 96px;
+  padding-top: 40px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 96px;
+  }
 
   &__container {
     display: flex; /* Располагаем элементы в строку */
     justify-content: space-between; /* Распределяем элементы по ширине */
     gap: 40px; /* Расстояние между элементами */
+    align-items: flex-start; /* Не растягивает изображение под адаптацию */
   }
 
   &__content {
@@ -15,7 +20,12 @@
   }
 
   &__image {
-    border-radius: 190px 190px 0 0; /* Полукруг сверху */
+    display: none; /* Скрываем изображение на мобильных устройствах */
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block; /* Показываем изображение на десктопе */
+      border-radius: 190px 190px 0 0; /* Полукруг сверху */
+    }
   }
 
   &__text {

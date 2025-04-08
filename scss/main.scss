@@ -57,86 +57,7 @@
 
 /* Footer */
 
-.footer-container {
-  display: flex; /* Располагаем элементы в строку */
-  gap: 20px; /* Расстояние между элементами */
-}
-
-.footer-nav,
-.footer-address {
-  display: flex; /* Располагаем элементы в строку */
-  flex-basis: 50%; /* Ширина элемента 50 процентов */
-  gap: 20px; /* Расстояние между элементами */
-}
-
-.footer-logo,
-.footer-menu {
-  flex-grow: 1; /* Растягиваем лого на всё доступное пространство, можно так же использовать свойство flex-basis: 50% */
-}
-
-.address-list {
-  flex-grow: 1; /* Растягиваем адрес на всё доступное пространство */
-}
-
-.address-info {
-  display: block; /* Располагаем элементы в столбец но можно и не писать, потому что эти свойства переходят от footer-address */
-  flex-grow: 1; /* Растягиваем информацию на всё доступное пространство */
-}
-
-.footer {
-  padding: 32px 0; /* Внутренние отступы */
-  position: relative; /* Позиционирование относительно родителя */
-  background-color: var(--color-primary-dark);
-  background-image: url('../images/footer-background.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.address-link {
-  font-weight: 300;
-  font-size: 16px;
-  color: var(--color-primary-light);
-  text-decoration: none;
-}
-
-.address-link:hover {
-  color: var(--color-brand-light);
-}
-
-.address-icon {
-  fill: var(--color-primary-light);
-}
-
-.address-icon:hover {
-  fill: var(--color-brand-light);
-}
-
-.address-copyright {
-  font-size: 14px;
-}
-
-.footer::before,
-.footer::after {
-  content: '';
-  position: absolute; /* Абсолютное позиционирование */
-  background-repeat: no-repeat; /* Повторение фона */
-  bottom: 0; /* Отступ снизу */
-}
-
-.footer::before {
-  width: 180px; /* Ширина декоративного элемента */
-  height: 120px; /* Высота декоративного элемента */
-  background-image: url(../images/decor-bread-small.png);
-  left: 0; /* Отступ слева */
-  /* background-size: auto; Размер фона */
-}
-
-.footer::after {
-  width: 380px; /* Ширина декоративного элемента */
-  height: 190px; /* Высота декоративного элемента */
-  right: 0; /* Отступ справа */
-  background-image: url(../images/decor-bread-large.png);
-}
+@import './layouts/footer'; /* Импортируем футер */
 
 /* Modal window */
 
@@ -149,3 +70,6 @@
 @import './components/form-policy'; /* Импортируем политику конфиденциальности */
 
 @import './components/input'; /* Импортируем инпуты */
+
+/* Mobile-menu */
+@import 'layouts/mobile-menu'; /* Импортируем мобильное меню */

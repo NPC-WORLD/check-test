@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 272px 0;
+  padding: 124px 0;
   background-image: linear-gradient(
       102.76deg,
       rgba(18, 18, 17, 0.78) 2.03%,
@@ -12,11 +12,31 @@
   background-size: cover; /* Размер фона */
   background-attachment: scroll; /* Фиксация фона */
 
+  @media screen and (min-width: $bp-desktop) {
+    padding: 272px 0;
+  }
+
   &__title {
-    margin-bottom: 0;
+    margin-bottom: 48px; /* Отступ снизу */
     color: var(--color-primary-light);
     text-align: center;
-    font-size: 128px;
+    font-size: 67px;
+    line-height: 1; /* Высота строки */
     font-weight: 900;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 0;
+      font-size: 128px; /* Размер шрифта для десктопа */
+      font-weight: 900; /* Жирность шрифта для десктопа */
+      line-height: 1.5; /* Высота строки */
+    }
+  }
+
+  &__button {
+    margin: 0 auto; /* Центрируем кнопку */
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none; /* Скрываем секцию на десктопе */
+    }
   }
 }

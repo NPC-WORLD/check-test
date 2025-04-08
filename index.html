@@ -46,9 +46,19 @@
               </li>
             </ul>
           </nav>
-          <button class="button modal-btn-open" type="button">
+          <button class="header__button button modal-btn-open" type="button">
             Замовити дзвінок
           </button>
+          <button class="header__burger menu-btn-open" type="button">
+            <svg width="24" height="24">
+              <use href="../images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -58,6 +68,12 @@
           <h1 class="hero-section__title">
             <span class="text-brand-light">Сучасна</span> пекарня
           </h1>
+          <button
+            class="hero-section__button button modal-btn-open"
+            type="button"
+          >
+            Замовити дзвінок
+          </button>
         </div>
       </section>
       <section class="advantages-section">
@@ -106,6 +122,7 @@
           </div>
         </div>
       </section>
+      <!--
       <section class="chefs-section section" id="chefs-section">
         <div class="container">
           <h2
@@ -234,8 +251,8 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="contacts-section section" id="contacts-section">
+      </section> -->
+      <!-- <section class="contacts-section section" id="contacts-section">
         <div class="container">
           <div class="contacts-section__container">
             <div class="contacts-section__form">
@@ -311,18 +328,18 @@
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
-        <div class="footer-container">
-          <nav class="footer-nav">
-            <div class="footer-logo">
+        <div class="footer__container">
+          <nav class="footer__nav">
+            <div class="footer__logo">
               <a href="#">
                 <img src="images/logo.svg" alt="Логотип сучасної пекарні" />
               </a>
             </div>
-            <ul class="footer-menu">
+            <ul class="footer__menu">
               <li><a class="link" href="#">Наші традиції</a></li>
               <li><a class="link" href="#">Шеф-кухарі</a></li>
               <li><a class="link" href="#">Формати</a></li>
@@ -352,7 +369,6 @@
               </li>
               <li>
                 <a href="#">
-                  <!-- Facebook icon -->
                   <svg class="address-icon" width="32" height="32">
                     <use href="../images/icons.svg#icon-facebook"></use>
                   </svg>
@@ -360,7 +376,6 @@
               </li>
               <li>
                 <a href="#">
-                  <!-- Instagram icon -->
                   <svg class="address-icon" width="32" height="32">
                     <use href="../images/icons.svg#icon-instagram"></use>
                   </svg>
@@ -376,7 +391,8 @@
           </address>
         </div>
       </div>
-    </footer>
+    </footer> -->
+
     <div class="backdrop">
       <div class="modal-window">
         <button class="modal-window__btn-close modal-btn-close">Close</button>
@@ -440,5 +456,6 @@
       </div>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>

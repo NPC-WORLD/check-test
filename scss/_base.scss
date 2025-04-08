@@ -4,11 +4,16 @@ a {
 body {
   color: var(--color-primary-dark); /* Цвет текста */
   font-family: 'Poppins', sans-serif; /* Шрифт */
-  font-size: 18px; /* Размер шрифта */
-  font-weight: 400; /* Начертание шрифта */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 300; /* Начертание шрифта */
   line-height: 1.5; /* Высота строки */
   margin: 0; /* Убираем автоматически добавленные браузером отступы */
   background-color: var(--color-primary-light);
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 18px; /* Размер шрифта */
+    font-weight: 400; /* Начертание шрифта */
+  }
 }
 
 *,
