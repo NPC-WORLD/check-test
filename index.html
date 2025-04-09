@@ -116,13 +116,14 @@
             </div>
             <img
               class="traditions-section__image"
-              src="images/baker-man.jpg"
+              srcset="/images/baker-man.jpg 1x, images/baker-man@2x.jpg 2x"
+              src="/images/baker-man.jpg"
               alt="Чоловік пекар дивиться на батони із посмішкою"
             />
           </div>
         </div>
       </section>
-      <!--
+
       <section class="chefs-section section" id="chefs-section">
         <div class="container">
           <h2
@@ -135,8 +136,12 @@
             <li class="chefs-section__item">
               <article class="chef-card">
                 <img
+                  srcset="
+                    /images/nastya-chef.jpg    1x,
+                    /images/nastya-chef@2x.jpg 2x
+                  "
                   class="chef-card__photo"
-                  src="images/nastya-chef.jpg"
+                  src="/images/nastya-chef.jpg"
                   alt="Nastya-chef"
                 />
                 <div>
@@ -156,8 +161,9 @@
             <li class="chefs-section__item">
               <article class="chef-card">
                 <img
+                  srcset="/images/vlad-chef.jpg 1x, /images/vlad-chef@2x.jpg 2x"
                   class="chef-card__photo"
-                  src="images/vlad-chef.jpg"
+                  src="/images/vlad-chef.jpg"
                   alt="Vlad-chef"
                 />
                 <div>
@@ -178,6 +184,7 @@
           </ul>
         </div>
       </section>
+      <!--
       <section class="formats-section section" id="formats-section">
         <div class="container">
           <h2
