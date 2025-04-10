@@ -1,29 +1,42 @@
 .traditions-section {
-  padding-top: 40px;
+  padding: 20px 0; /* Отступ сверху */
 
   @media screen and (min-width: $bp-tablet) {
-    padding-top: 96px;
+    padding: 96px 0 48px; /* Отступ сверху */
+  }
+
+  &__title {
+    margin: 0 0 8px; /* Отступ сверху 0, слева и справа auto, снизу 8  */
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0; /* Убираем отступы сверху и снизу */
+    }
   }
 
   &__container {
     display: flex; /* Располагаем элементы в строку */
     justify-content: space-between; /* Распределяем элементы по ширине */
-    gap: 40px; /* Расстояние между элементами */
+    gap: 105px; /* Расстояние между элементами */
     align-items: flex-start; /* Не растягивает изображение под адаптацию */
   }
 
   &__content {
     display: flex; /* Располагаем элементы в строку */
     flex-direction: column; /* Располагаем элементы в столбец */
-    gap: 42px; /* Расстояние между элементами */
-    max-width: 710px; /* Максимальная ширина контента */
+    gap: 16px; /* Расстояние между элементами */
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex; /* Располагаем элементы в строку */
+      flex-direction: column; /* Располагаем элементы в столбец */
+      gap: 42px; /* Расстояние между элементами */
+    }
   }
 
   &__image {
     display: none; /* Скрываем изображение на мобильных устройствах */
 
     @media screen and (min-width: $bp-tablet) {
-      display: block; /* Показываем изображение на десктопе */
+      display: block; /* Показываем изображение на планшетах и выше */
       border-radius: 190px 190px 0 0; /* Полукруг сверху */
     }
   }
