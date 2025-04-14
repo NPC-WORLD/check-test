@@ -1,24 +1,51 @@
 .chef-card {
   display: flex; /* Располагаем элементы в строку */
-  gap: 30px; /* Расстояние между элементами */
+  gap: 16px; /* Расстояние между элементами */
+  align-items: flex-start; /* Для того чтобы изображение не сужалось*/
 
-  &__photo {
-    border-radius: 4px 4px 4px 200px; /* Скругление углов */
-    box-shadow: -16px 16px 0 0 var(--color-primary-light),
-      -16px 16px 0 2px var(--color-decor-dark); /* Тень */
+  @media screen and (min-width: $bp-desktop) {
+    display: flex; /* Располагаем элементы в строку */
+    gap: 30px; /* Расстояние между элементами */
+    align-items: flex-start; /* Для того чтобы изображение не сужалось*/
   }
 
-  &__text {
-    margin-bottom: 24px; /* Отступ снизу у параграфа */
+  &__photo {
+    width: 140px; /* Ширина изображения */
+    border-radius: 2px 2px 2px 115px; /* Скругление углов */
+    box-shadow: -8px 8px 0 0 var(--color-primary-light),
+      -8px 8px 0 1px var(--color-decor-dark); /* Тень */
 
-    &:last-child {
-      margin-bottom: 0; /* Убираем нижний отступ у последнего параграфа */
+    @media screen and (min-width: $bp-desktop) {
+      width: 240px; /* Ширина изображения для десктопа */
+      border-radius: 4px 4px 4px 200px; /* Скругление углов */
+      box-shadow: -16px 16px 0 0 var(--color-primary-light),
+        -16px 16px 0 1px var(--color-decor-dark); /* Тень */
+    }
+  }
+
+  &__content {
+    display: flex; /* Располагаем элементы в строку */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    gap: 12px; /* Расстояние между элементами */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 300; /* Начертание шрифта */
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex; /* Располагаем элементы в строку */
+      flex-direction: column; /* Располагаем элементы в колонку */
+      gap: 20px; /* Расстояние между элементами */
+      font-size: 18px; /* Размер шрифта */
+      font-weight: 400; /* Начертание шрифта */
     }
   }
 
   &__title {
     font-weight: 600; /* Жирность шрифта */
-    font-size: 40px; /* Размер шрифта */
-    margin-bottom: 16px; /* Отступ снизу у заголовка */
+    font-size: 24px; /* Размер шрифта */
+
+    @media screen and (min-width: $bp-desktop) {
+      font-weight: 600; /* Жирность шрифта */
+      font-size: 40px; /* Размер шрифта */
+    }
   }
 }

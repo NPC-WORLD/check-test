@@ -24,6 +24,7 @@
     display: flex; /* Располагаем элементы в строку */
     flex-direction: column; /* Располагаем элементы в столбец */
     gap: 16px; /* Расстояние между элементами */
+    font-size: 16px; /* Размер шрифта */
 
     @media screen and (min-width: $bp-tablet) {
       display: flex; /* Располагаем элементы в строку */
