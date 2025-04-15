@@ -1,10 +1,15 @@
 .form-policy {
-  margin: 0 auto; /* Отступ слева и справа auto, центрируем текст */
-  max-width: 220px;
-  font-family: 'Griloy', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center; /* Выравниваем текст по центру */
+  display: none; /* Скрываем текст по умолчанию */
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0 auto; /* Отступ слева и справа auto, центрируем текст */
+    max-width: 220px;
+    font-family: 'Griloy', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center; /* Выравниваем текст по центру */
+    display: block; /* Показываем текст на планшете и выше */
+  }
 
   &__link {
     color: var(--color-primary-dark); /* Цвет текста */

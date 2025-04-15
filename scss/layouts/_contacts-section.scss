@@ -3,32 +3,76 @@
 
   &__container {
     display: flex; /* Располагаем элементы в строку */
-    gap: 32px; /* Расстояние между элементами */
+    gap: 24px; /* Расстояние между элементами */
+    flex-direction: column; /* Располагаем элементы в колонку */
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row; /* Располагаем элементы в колонку */
+      gap: 32px; /* Расстояние между элементами */
+    }
   }
 
   &__title {
-    margin-bottom: 16px;
+    font-weight: 600; /* Жирный шрифт */
+    font-size: 32px; /* Размер шрифта */
+    margin-bottom: 8px; /* Отступ снизу */
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+      font-weight: 900; /* Жирный шрифт */
+      font-size: 63px; /* Размер шрифта */
+    }
   }
 
   &__map {
-    display: flex; /* Располагаем элементы в строку */
     flex-shrink: 0; /* Запрещаем уменьшение размера */
     border: none; /* Убираем рамку */
     border-radius: 16px; /* Скругляем углы */
+    margin: 0 -24px; /* Отступ слева и справа -24px, чтобы убрать отступы у карты, вместо width:100% */
+    height: 175px; /* Высота карты */
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 400px; /* Ширина карты */
+      height: 495px; /* Высота карты */
+      margin: auto; /* Центрируем карту */
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 595px; /* Ширина карты */
+      height: 600px; /* Высота карты */
+    }
   }
 
   &__form-field {
-    margin-bottom: 24px; /* Отступ снизу */
+    margin-bottom: 16px; /* Отступ снизу */
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 24px; /* Отступ снизу */
+    }
   }
 
   &__button {
     display: block; /* Блочный элемент, потому что кнопка не блок*/
-    margin: 0 auto 16px; /* Отступ слева и справа auto, центрируем кнопку*/
+    margin: 0 auto; /* Отступ слева и справа auto, центрируем кнопку*/
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block; /* Блочный элемент, потому что кнопка не блок*/
+      margin: 0 auto 16px; /* Отступ слева и справа auto, центрируем кнопку*/
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block; /* Блочный элемент, потому что кнопка не блок*/
+      margin: 0 auto 16px; /* Отступ слева и справа auto, центрируем кнопку*/
+    }
   }
 
   &__text {
-    font-family: 'Roboto', sans-serif; /* Шрифт */
-    margin-bottom: 42px; /* Отступ снизу */
+    margin-bottom: 24px; /* Отступ снизу */
     color: var(--color-brand-dark); /* Цвет текста */
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 42px; /* Отступ снизу */
+      color: var(--color-brand-dark); /* Цвет текста */
+    }
   }
 }

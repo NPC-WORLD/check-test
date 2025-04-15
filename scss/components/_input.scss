@@ -4,11 +4,19 @@
   }
 
   &__control {
-    padding: 16px 42px; /* Внутренние отступы */
+    padding: 8px 24px; /* Внутренние отступы */
     width: 100%; /* Ширина элемента */
     border: 1px solid var(--color-decor-dark); /* Цвет рамки */
     border-radius: 8px; /* Скругляем углы */
     background-color: transparent; /* Прозрачный фон */
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 42px; /* Внутренние отступы */
+      width: 100%; /* Ширина элемента */
+      border: 1px solid var(--color-decor-dark); /* Цвет рамки */
+      border-radius: 8px; /* Скругляем углы */
+      background-color: transparent; /* Прозрачный фон */
+    }
 
     &:focus {
       border-color: var(--color-brand-light); /* Цвет рамки */

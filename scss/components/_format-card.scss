@@ -1,34 +1,26 @@
 .format-card {
-  display: flex; /* Располагаем элементы в строку */
-  flex-direction: column; /* Располагаем элементы в столбец */
-  justify-content: flex-end; /* Выравниваем элементы по низу */
-  position: relative; /* Позиционирование относительно родителя */
-  height: 444px; /* Высота карточки */
-  width: 100%; /* Ширина карточки */
-  padding: 24px; /* Внутренние отступы */
-  border-radius: 16px; /* Скругляем углы */
-  overflow: hidden; /* Обрезаем элементы, которые выходят за пределы родителя */
-  transition: transform 0.3s;
+  // transition: transform 0.3s;
 
-  &:hover {
-    transform: scale(1.05);
-  }
+  // &:hover {
+  //   transform: scale(1.05);
+  // }
 
-  &:after {
-    content: ''; /* Добавляем контент */
-    position: absolute; /* Абсолютное позиционирование */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &__container {
+    display: flex; /* Располагаем элементы в строку */
+    flex-direction: column; /* Располагаем элементы в столбец */
+    justify-content: flex-end; /* Выравниваем элементы по низу */
+    position: relative; /* Позиционирование относительно родителя */
+    height: 444px; /* Высота карточки */
+    width: 100%; /* Ширина карточки */
+    padding: 24px; /* Внутренние отступы */
+    border-radius: 16px; /* Скругляем углы */
     background-image: linear-gradient(
       180deg,
       rgba(49, 38, 26, 0) 55.21%,
       rgba(49, 38, 26, 0.71) 72.92%,
       var(--color-primary-dark) 100%
     );
-    pointer-events: none; /* Чтобы не мешал кликам */
-    z-index: 1; /* Перемещаем элемент на передний план */
+    overflow: hidden; /* Скрываем элементы, которые не помещаются в карточку */
   }
 
   &__image {
@@ -37,14 +29,13 @@
     left: 0; /* Отступ слева */
     width: 100%; /* Ширина элемента */
     height: 100%; /* Высота элемента */
-    z-index: 0; /* Перемещаем элемент на задний план */
+    z-index: -1; /* Перемещаем элемент на задний план */
   }
 
   &__title {
     color: var(--color-primary-light); /* Цвет текста */
     font-weight: 600;
     font-size: 24px;
-    z-index: 2; /* Перемещаем элемент на передний план */
     margin-bottom: 16px; /* Отступ снизу */
   }
 
@@ -52,6 +43,22 @@
     font-weight: 300;
     font-size: 14px;
     color: var(--color-primary-light); /* Цвет текста */
-    z-index: 2; /* Перемещаем элемент на передний план */
   }
 }
+
+//  &:after
+//   content: ''; /* Добавляем контент */
+//   position: absolute; /* Абсолютное позиционирование */
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-image: linear-gradient(
+//     180deg,
+//     rgba(49, 38, 26, 0) 55.21%,
+//     rgba(49, 38, 26, 0.71) 72.92%,
+//     var(--color-primary-dark) 100%
+//   );
+//   pointer-events: none; /* Чтобы не мешал кликам */
+//   z-index: 1; /* Перемещаем элемент на передний план */
+// }
