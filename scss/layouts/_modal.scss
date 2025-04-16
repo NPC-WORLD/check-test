@@ -9,7 +9,7 @@
   left: 0; /* Отступ слева */
   right: 0; /* Отступ справа */
   background-color: rgb(0, 0, 0, 0.5); /* Цвет фона */
-  padding: 20px 0; /* Внутренние отступы */
+  padding: 20px; /* Внутренние отступы */
   transition: opacity 0.3s, visibility 0.3s; /* Плавное изменение прозрачности */
   z-index: 1000; /* Положение по оси Z */
 
@@ -29,8 +29,12 @@
   max-height: 880px; /* Высота модального окна */
   background-color: var(--color-primary-light); /* Цвет фона */
   border-radius: 32px; /* Скругляем углы */
-  padding: 128px; /* Внутренние отступы */
+  padding: 60px; /* Внутренние отступы */
   overflow-y: auto; /* Появление скроллбара */
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 128px; /* Внутренние отступы */
+  }
 
   &__btn-close {
     position: absolute; /* Абсолютное позиционирование */
@@ -48,17 +52,25 @@
 
   &__title {
     font-weight: 900; /* Жирный шрифт */
-    font-size: 60px; /* Размер шрифта */
+    font-size: 40px; /* Размер шрифта */
     line-height: 1.3; /* Высота строки */
     color: var(--color-primary-dark); /* Цвет текста */
     text-align: center; /* Выравнивание текста по центру */
     margin-bottom: 8px; /* Отступ снизу */
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 60px; /* Размер шрифта */
+    }
   }
 
   &__text {
     font-family: 'Roboto', sans-serif; /* Шрифт */
-    margin-bottom: 72px; /* Отступ снизу */
+    margin-bottom: 36px; /* Отступ снизу */
     color: var(--color-brand-dark); /* Цвет текста */
     text-align: center; /* Выравнивание текста по центру */
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 72px; /* Отступ снизу */
+    }
   }
 }

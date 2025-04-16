@@ -1,30 +1,5 @@
-.footer__container {
-  display: flex; /* Располагаем элементы в строку */
-  gap: 20px; /* Расстояние между элементами */
-}
-
-.footer__nav,
-.footer-address {
-  display: flex; /* Располагаем элементы в строку */
-  flex-basis: 50%; /* Ширина элемента 50 процентов */
-  gap: 20px; /* Расстояние между элементами */
-}
-
-.footer__logo,
-.footer__menu {
-  flex-grow: 1; /* Растягиваем лого на всё доступное пространство, можно так же использовать свойство flex-basis: 50% */
-}
-
-.address-list {
-  flex-grow: 1; /* Растягиваем адрес на всё доступное пространство */
-}
-
-.address-info {
-  display: block; /* Располагаем элементы в столбец но можно и не писать, потому что эти свойства переходят от footer-address */
-  flex-grow: 1; /* Растягиваем информацию на всё доступное пространство */
-}
-
 .footer {
+  text-align: center; /* Выравниваем текст по центру */
   padding: 32px 0; /* Внутренние отступы */
   position: relative; /* Позиционирование относительно родителя */
   background-color: var(--color-primary-dark);
@@ -32,51 +7,186 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.address-link {
-  font-weight: 300;
-  font-size: 16px;
-  color: var(--color-primary-light);
-  text-decoration: none;
-}
 
-.address-link:hover {
-  color: var(--color-brand-light);
-}
+  @media screen and (min-width: $bp-tablet) {
+    padding: 32px 0; /* Внутренние отступы */
+    position: relative; /* Позиционирование относительно родителя */
+    background-color: var(--color-primary-dark);
+    background-image: url('../images/footer-background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-.address-icon {
-  fill: var(--color-primary-light);
-}
+  &__container {
+    display: flex; /* Располагаем элементы в строку */
+    gap: 18px; /* Расстояние между элементами */
+    flex-direction: column; /* Располагаем элементы в столбец */
 
-.address-icon:hover {
-  fill: var(--color-brand-light);
-}
+    @media screen and (min-width: $bp-tablet) {
+      display: flex; /* Располагаем элементы в строку */
+      gap: 20px; /* Расстояние между элементами */
+      flex-direction: row; /* Располагаем элементы в столбец */
+      align-items: start; /* Выравниваем элементы по началу */
+    }
+  }
 
-.address-copyright {
-  font-size: 14px; /* Размер шрифта */
-  font-weight: 400; /* Жирность текста */
-  color: var(--color-decor-dark); /* Цвет текста */
-}
+  &__nav,
+  &__address {
+    display: flex; /* Располагаем элементы в строку */
+    flex-basis: 50%; /* Ширина элемента 50 процентов */
+    gap: 20px; /* Расстояние между элементами */
+    flex-direction: column; /* Располагаем элементы в столбец */
 
-.footer::before,
-.footer::after {
-  content: '';
-  position: absolute; /* Абсолютное позиционирование */
-  background-repeat: no-repeat; /* Повторение фона */
-  bottom: 0; /* Отступ снизу */
-}
+    @media screen and (min-width: $bp-tablet) {
+      display: flex; /* Располагаем элементы в строку */
+      gap: 20px; /* Расстояние между элементами */
+      flex-basis: 50%; /* Ширина элемента 50 процентов */
+      flex-direction: row; /* Располагаем элементы в столбец */
+    }
+  }
 
-.footer::before {
-  width: 180px; /* Ширина декоративного элемента */
-  height: 120px; /* Высота декоративного элемента */
-  background-image: url(../images/decor-bread-small.png);
-  left: 0; /* Отступ слева */
-  /* background-size: auto; Размер фона */
-}
+  &__logo {
+    flex-grow: 1; /* Растягиваем лого на всё доступное пространство, можно так же использовать свойство flex-basis: 50% */
+  }
 
-.footer::after {
-  width: 380px; /* Ширина декоративного элемента */
-  height: 190px; /* Высота декоративного элемента */
-  right: 0; /* Отступ справа */
-  background-image: url(../images/decor-bread-large.png);
+  &__menu {
+    display: flex; /* Располагаем элементы в строку */
+    flex-direction: column; /* Располагаем элементы в столбец */
+    gap: 18px; /* Расстояние между элементами */
+    flex-grow: 1; /* Растягиваем лого на всё доступное пространство, можно так же использовать свойство flex-basis: 50% */
+    align-items: center; /* Выравниваем элементы по началу */
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex; /* Располагаем элементы в строку */
+      flex-direction: column; /* Располагаем элементы в столбец */
+      gap: 16px; /* Расстояние между элементами */
+      flex-grow: 1; /* Растягиваем лого на всё доступное пространство, можно так же использовать свойство flex-basis: 50% */
+      align-items: flex-start; /* Выравниваем элементы по началу */
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    background-repeat: no-repeat; /* Повторение фона */
+    bottom: 0; /* Отступ снизу */
+  }
+
+  &::before {
+    width: 180px; /* Ширина декоративного элемента */
+    height: 120px; /* Высота декоративного элемента */
+    background-image: url(../images/decor-bread-small.png);
+    left: 0; /* Отступ слева */
+    /* background-size: auto; Размер фона */
+  }
+
+  &::after {
+    width: 380px; /* Ширина декоративного элемента */
+    height: 190px; /* Высота декоративного элемента */
+    right: 0; /* Отступ справа */
+    background-image: url(../images/decor-bread-large.png);
+  }
+
+  &__address-list {
+    display: flex; /* Располагаем элементы в строку */
+    flex-direction: column; /* Располагаем элементы в столбец */
+    gap: 18px; /* Расстояние между элементами */
+    flex-grow: 1; /* Растягиваем адрес на всё доступное пространство */
+    align-items: center; /* Выравниваем элементы по началу */
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex; /* Располагаем элементы в строку */
+      flex-direction: column; /* Располагаем элементы в столбец */
+      gap: 16px; /* Расстояние между элементами */
+      flex-grow: 1; /* Растягиваем адрес на всё доступное пространство */
+      align-items: flex-start; /* Выравниваем элементы по началу */
+    }
+  }
+
+  &__address-info {
+    display: block; /* Располагаем элементы в столбец но можно и не писать, потому что эти свойства переходят от footer-address */
+    flex-grow: 1; /* Растягиваем информацию на всё доступное пространство */
+  }
+
+  &__address-link {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-primary-light);
+    text-decoration: none;
+    text-align: center; /* Выравниваем текст по левому краю */
+    transition: color 0.3s; /* Плавное изменение цвета текста */
+
+    @media screen and (min-width: $bp-tablet) {
+      font-weight: 300;
+      font-size: 16px;
+      color: var(--color-primary-light);
+      text-decoration: none;
+      text-align: start; /* Выравниваем текст по левому краю */
+    }
+  }
+
+  &__address-link:hover {
+    color: var(--color-brand-light);
+  }
+
+  &__address-icons {
+    display: flex; /* Располагаем элементы в строку */
+    gap: 22px; /* Расстояние между элементами */
+    margin: -2px auto 0px; /* Выравниваем по центру */
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex; /* Располагаем элементы в строку */
+      gap: 22px; /* Расстояние между элементами */
+      margin: 0 0; /* Выравниваем по центру */
+    }
+  }
+
+  &__address-icon {
+    fill: var(--color-primary-light);
+  }
+
+  &__address-icon:hover {
+    fill: var(--color-brand-light);
+  }
+
+  &__address-copyright {
+    font-size: 12px; /* Размер шрифта */
+    font-weight: 400; /* Жирность текста */
+    color: var(--color-decor-dark); /* Цвет текста */
+    margin-top: 8px; /* Отступ сверху */
+    text-align: center; /* Выравниваем текст по левому краю */
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 14px; /* Размер шрифта */
+      font-weight: 400; /* Жирность текста */
+      color: var(--color-decor-dark); /* Цвет текста */
+      margin-top: 16px; /* Отступ сверху */
+      text-align: center; /* Выравниваем текст по левому краю */
+    }
+  }
+
+  &__address-privacy-policy {
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 300; /* Жирность текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: var(--color-primary-light); /* Цвет текста */
+    text-align: center; /* Выравниваем текст по левому краю */
+    margin-top: -12px; /* Отступ сверху */
+    display: block; /* Блочный элемент, чтобы можно было задать ширину и высоту */
+    transition: color 0.3s; /* Плавное изменение цвета текста */
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 16px; /* Размер шрифта */
+      font-weight: 300; /* Жирность текста */
+      text-decoration: none; /* Убираем подчеркивание */
+      color: var(--color-primary-light); /* Цвет текста */
+      text-align: center; /* Выравниваем текст по левому краю */
+    }
+
+    &:hover {
+      color: var(--color-brand-light);
+    }
+  }
 }

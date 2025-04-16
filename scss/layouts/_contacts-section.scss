@@ -1,5 +1,9 @@
 .contacts-section {
-  padding-bottom: 96px; /* Отступ снизу */
+  padding-bottom: 0; /* Отступ снизу */
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 96px; /* Отступ снизу */
+  }
 
   &__container {
     display: flex; /* Располагаем элементы в строку */
@@ -32,7 +36,7 @@
     height: 175px; /* Высота карты */
 
     @media screen and (min-width: $bp-tablet) {
-      width: 400px; /* Ширина карты */
+      width: 250px; /* Ширина карты */
       height: 495px; /* Высота карты */
       margin: auto; /* Центрируем карту */
     }
