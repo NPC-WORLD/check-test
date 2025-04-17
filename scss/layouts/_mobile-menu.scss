@@ -8,6 +8,10 @@
   transform: translateX(100%); /* Сдвигаем меню за пределы экрана */
   transition: transform 0.3s; /* Плавный переход при открытии и закрытии меню */
 
+  @media screen and (min-width: $bp-desktop) {
+    display: none; /* Скрываем меню на больших экранах */
+  }
+
   &.is-open {
     transform: translateX(0); /* Показываем меню */
   }
@@ -17,4 +21,30 @@
     top: 16px; /* Отступ сверху */
     right: 24px; /* Отступ справа */
   }
+}
+
+.mobile-menu__logo {
+  margin-bottom: 32px; /* Отступ снизу */
+}
+
+.mobile-menu__container {
+  position: absolute; /* Фиксируем логотип */
+  top: 16px; /* Отступ сверху */
+  left: 24px; /* Отступ слева */
+}
+
+.mobile-menu__list {
+  display: flex; /* Используем флекс для выравнивания элементов */
+  flex-direction: column; /* Вертикальное выравнивание */
+  gap: 16px; /* Отступ между элементами */
+}
+
+.mobile-menu__item {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: var(--color-primary-dark); /* Цвет текста */
+}
+
+.mobile-menu__item:hover {
+  color: var(--color-brand-light); /* Цвет текста при наведении */
+  font-weight: 600; /* Жирный текст при наведении */
 }

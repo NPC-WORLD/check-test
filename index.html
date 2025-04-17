@@ -32,7 +32,7 @@
       <div class="container">
         <div class="header__container">
           <nav class="header__nav">
-            <a href="./index.html">
+            <a href="/index.html">
               <img src="images/logo.svg" alt="Логотип сучасної пекарні" />
             </a>
             <ul class="header__menu">
@@ -59,6 +59,41 @@
             </svg>
           </button>
           <div class="mobile-menu">
+            <div class="mobile-menu__container">
+              <nav class="mobile-menu__nav">
+                <div class="mobile-menu__logo">
+                  <a href="/index.html">
+                    <img
+                      src="images/logo-mobile.svg"
+                      alt="Логотип сучасної пекарні"
+                    />
+                  </a>
+                </div>
+
+                <ul class="mobile-menu__list">
+                  <li>
+                    <a class="mobile-menu__item" href="#traditions-section"
+                      >Наші традиції</a
+                    >
+                  </li>
+                  <li>
+                    <a class="mobile-menu__item" href="#chefs-section"
+                      >Шеф-кухарі</a
+                    >
+                  </li>
+                  <li>
+                    <a class="mobile-menu__item" href="#formats-section"
+                      >Формати</a
+                    >
+                  </li>
+                  <li>
+                    <a class="mobile-menu__item" href="#contacts-section"
+                      >Контакти</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
             <button class="mobile-menu__btn-close menu-btn-close" type="button">
               Close
             </button>
@@ -445,7 +480,7 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal-window">
         <button class="modal-window__btn-close modal-btn-close">Close</button>
         <h2 class="modal-window__title">Замовити дзвінок</h2>
@@ -509,6 +544,7 @@
     </div>
     <script src="js/modal.js"></script>
     <script src="js/mobile-menu.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/formats-slider.js"></script>
     <!-- Swiper -->

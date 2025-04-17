@@ -36,7 +36,7 @@
   &__image {
     display: none; /* Скрываем изображение на мобильных устройствах */
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       display: block; /* Показываем изображение на планшетах и выше */
       border-radius: 190px 190px 0 0; /* Полукруг сверху */
     }
