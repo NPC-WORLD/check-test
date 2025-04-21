@@ -20,6 +20,17 @@
     position: absolute; /* Фиксируем кнопку закрытия */
     top: 16px; /* Отступ сверху */
     right: 24px; /* Отступ справа */
+    border: none; /* Убираем рамку */
+    cursor: pointer; /* Курсор при наведении */
+    background-color: transparent; /* Прозрачный фон */
+
+    & svg {
+      fill: var(--color-primary-dark); /* Цвет иконки */
+    }
+
+    & svg:hover {
+      fill: var(--color-brand-dark); /* Цвет иконки */
+    }
   }
 }
 

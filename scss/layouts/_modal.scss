@@ -40,6 +40,17 @@
     position: absolute; /* Абсолютное позиционирование */
     top: 40px; /* Отступ сверху */
     right: 40px; /* Отступ справа */
+    border: none; /* Убираем рамку */
+    cursor: pointer; /* Курсор при наведении */
+    background-color: transparent; /* Прозрачный фон */
+
+    & svg {
+      fill: var(--color-primary-dark); /* Цвет иконки */
+    }
+
+    & svg:hover {
+      fill: var(--color-brand-dark); /* Цвет иконки */
+    }
   }
 
   &__form-field {
