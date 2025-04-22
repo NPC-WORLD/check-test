@@ -72,21 +72,46 @@
     position: absolute; /* Абсолютное позиционирование */
     background-repeat: no-repeat; /* Повторение фона */
     bottom: 0; /* Отступ снизу */
+
+    @media screen and (min-width: $bp-tablet) {
+      content: '';
+      position: absolute; /* Абсолютное позиционирование */
+      background-repeat: no-repeat; /* Повторение фона */
+      bottom: 0; /* Отступ снизу */
+    }
   }
 
   &::before {
-    width: 180px; /* Ширина декоративного элемента */
-    height: 120px; /* Высота декоративного элемента */
-    background-image: url(../images/decor-bread-small.png);
+    width: 92px; /* Ширина декоративного элемента */
+    height: 470px; /* Высота декоративного элемента */
+    background-image: url(/images/decor-bread-mobile.png);
     left: 0; /* Отступ слева */
+
     /* background-size: auto; Размер фона */
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 180px; /* Ширина декоративного элемента */
+      height: 120px; /* Высота декоративного элемента */
+      background-image: url(/images/decor-bread-small.png);
+      left: 0; /* Отступ слева */
+
+      /* background-size: auto; Размер фона */
+    }
   }
 
   &::after {
-    width: 380px; /* Ширина декоративного элемента */
-    height: 190px; /* Высота декоративного элемента */
-    right: 0; /* Отступ справа */
-    background-image: url(../images/decor-bread-large.png);
+    width: 100px; /* Ширина декоративного элемента */
+    height: 90px; /* Высота декоративного элемента */
+    right: 0px; /* Отступ справа */
+
+    background-image: url(/images/decor-breads-mobile.png);
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 380px; /* Ширина декоративного элемента */
+      height: 185px; /* Высота декоративного элемента */
+      right: 0; /* Отступ справа */
+      background-image: url(/images/decor-bread-large.png);
+    }
   }
 
   &__address-list {

@@ -7,9 +7,32 @@
   background-color: var(--color-primary-light); /* Цвет фона меню */
   transform: translateX(100%); /* Сдвигаем меню за пределы экрана */
   transition: transform 0.3s; /* Плавный переход при открытии и закрытии меню */
+  z-index: 1000; /* Устанавливаем высокий z-index для перекрытия других элементов */
 
   @media screen and (min-width: $bp-desktop) {
     display: none; /* Скрываем меню на больших экранах */
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    background-repeat: no-repeat; /* Повторение фона */
+    bottom: 0; /* Отступ снизу */
+  }
+
+  &::before {
+    width: 150px; /* Ширина декоративного элемента */
+    height: 150px; /* Высота декоративного элемента */
+    background-image: url(/images/decor-text.png); /* Фоновое изображение */
+    left: 0; /* Отступ справа */
+  }
+
+  &::after {
+    width: 150px; /* Ширина декоративного элемента */
+    height: 205px; /* Высота декоративного элемента */
+    background-image: url(/images/decor-bread-modal-window.png); /* Фоновое изображение */
+    right: 0; /* Отступ справа */
   }
 
   &.is-open {

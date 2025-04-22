@@ -31,6 +31,41 @@
   border-radius: 32px; /* Скругляем углы */
   padding: 60px; /* Внутренние отступы */
   overflow-y: auto; /* Появление скроллбара */
+  z-index: 1000; /* Положение по оси Z */
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    background-repeat: no-repeat; /* Повторение фона */
+    bottom: 0; /* Отступ снизу */
+  }
+
+  &::before {
+    width: 150px; /* Ширина декоративного элемента */
+    height: 150px; /* Высота декоративного элемента */
+    background-image: url(/images/decor-text.png); /* Фоновое изображение */
+    left: 0; /* Отступ справа */
+    bottom: -200px; /* Отступ снизу */
+    z-index: -1; /* Положение по оси Z */
+
+    @media screen and (min-width: $bp-tablet) {
+      bottom: 0; /* Отступ снизу */
+    }
+  }
+
+  &::after {
+    width: 150px; /* Ширина декоративного элемента */
+    height: 205px; /* Высота декоративного элемента */
+    background-image: url(/images/decor-bread-modal-window.png); /* Фоновое изображение */
+    right: 0; /* Отступ справа */
+    bottom: -200px; /* Отступ снизу */
+    z-index: -1; /* Положение по оси Z */
+
+    @media screen and (min-width: $bp-tablet) {
+      bottom: 0; /* Отступ снизу */
+    }
+  }
 
   @media screen and (min-width: $bp-tablet) {
     padding: 128px; /* Внутренние отступы */
