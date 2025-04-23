@@ -2,6 +2,10 @@
   padding-bottom: 0; /* Отступ снизу */
 
   @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 40px; /* Отступ снизу */
+  }
+
+  @media screen and (min-width: $bp-desktop) {
     padding-bottom: 96px; /* Отступ снизу */
   }
 
@@ -22,6 +26,12 @@
     margin-bottom: 8px; /* Отступ снизу */
 
     @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 8px;
+      font-weight: 900; /* Жирный шрифт */
+      font-size: 32px; /* Размер шрифта */
+    }
+
+    @media screen and (min-width: $bp-desktop) {
       margin-bottom: 16px;
       font-weight: 900; /* Жирный шрифт */
       font-size: 63px; /* Размер шрифта */
@@ -36,8 +46,8 @@
     height: 175px; /* Высота карты */
 
     @media screen and (min-width: $bp-tablet) {
-      width: 280px; /* Ширина карты */
-      height: 395px; /* Высота карты */
+      width: 380px; /* Ширина карты */
+      height: 495px; /* Высота карты */
       margin: auto; /* Центрируем карту */
     }
 

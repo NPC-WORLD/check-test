@@ -3,6 +3,10 @@
     margin-bottom: 24px; /* Отступ снизу */
 
     @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 24px; /* Отступ снизу */
+    }
+
+    @media screen and (min-width: $bp-desktop) {
       margin-bottom: 80px; /* Отступ снизу */
     }
   }
