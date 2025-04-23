@@ -21,7 +21,7 @@
     <!-- Fonts Roboto-->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="/css/main.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -32,7 +32,7 @@
       <div class="container">
         <div class="header__container">
           <nav class="header__nav">
-            <a href="/index.html">
+            <a href="index.html">
               <img src="images/logo.svg" alt="Логотип сучасної пекарні" />
             </a>
             <ul class="header__menu">
@@ -55,7 +55,7 @@
           </button>
           <button class="header__burger menu-btn-open" type="button">
             <svg width="24" height="24">
-              <use href="../images/icons.svg#icon-menu"></use>
+              <use href="images/icons.svg#icon-menu"></use>
             </svg>
           </button>
           <div class="mobile-menu">
@@ -64,7 +64,7 @@
                 <div class="mobile-menu__logo">
                   <a href="/index.html">
                     <img
-                      src="images/logo-mobile.svg"
+                      src="/images/logo-mobile.svg"
                       alt="Логотип сучасної пекарні"
                     />
                   </a>
@@ -96,7 +96,7 @@
             </div>
             <button class="mobile-menu__btn-close menu-btn-close" type="button">
               <svg width="16" height="16">
-                <use href="/images/icons.svg#icon-close-button"></use>
+                <use href="images/icons.svg#icon-close-button"></use>
               </svg>
             </button>
           </div>
@@ -157,7 +157,10 @@
             </div>
             <img
               class="traditions-section__image"
-              srcset="/images/baker-man.jpg 1x, images/baker-man@2x.jpg 2x"
+              srcset="
+                /images/baker-man.jpg           1x,
+                /images/double/baker-man@2x.jpg 2x
+              "
               src="/images/baker-man.jpg"
               alt="Чоловік пекар дивиться на батони із посмішкою"
             />
@@ -177,11 +180,11 @@
               <article class="chef-card">
                 <img
                   srcset="
-                    /images/nastya-chef.jpg    1x,
-                    /images/nastya-chef@2x.jpg 2x
+                    /images/olia-chef.jpg           1x,
+                    /images/double/olia-chef@2x.jpg 2x
                   "
                   class="chef-card__photo"
-                  src="/images/nastya-chef.jpg"
+                  src="/images/olia-chef.jpg"
                   alt="Nastya-chef"
                 />
                 <div class="chef-card__content">
@@ -201,9 +204,12 @@
             <li class="chefs-section__item">
               <article class="chef-card">
                 <img
-                  srcset="/images/vlad-chef.jpg 1x, /images/vlad-chef@2x.jpg 2x"
+                  srcset="
+                    /images/kolia-chef.jpg          1x,
+                    images/double/kolia-chef@2x.jpg 2x
+                  "
                   class="chef-card__photo"
-                  src="/images/vlad-chef.jpg"
+                  src="/images/kolia-chef.jpg"
                   alt="Vlad-chef"
                 />
                 <div class="chef-card__content">
@@ -235,7 +241,7 @@
               type="button"
             >
               <svg class="carousel-arrow" width="16" height="16">
-                <use href="../images/icons.svg#icon-Arrow"></use>
+                <use href="images/icons.svg#icon-Arrow"></use>
               </svg>
             </button>
             <div class="formats-section__container swiper-container">
@@ -245,7 +251,10 @@
                     <div class="format-card__container">
                       <img
                         class="format-card__image"
-                        src="./images/Walrus-format.jpg"
+                        srcset="
+                          /images/Walrus-format.jpg 1x, images/double/Walrus-format@2x.jpg 2x
+                          /"
+                        src="/images/Walrus-format.jpg"
                         alt="Walrus-format"
                       />
                       <h3 class="format-card__title" lang="en">Walrus</h3>
@@ -266,7 +275,10 @@
                     <div class="format-card__container">
                       <img
                         class="format-card__image"
-                        src="./images/Horseshoe-format.jpg"
+                        srcset="
+                          /images/Horseshoe-format.jpg 1x, images/double/Horseshoe-format@2x.jpg 2x
+                          /"
+                        src="/images/Horseshoe-format.jpg"
                         alt="Horseshoe-format"
                       />
                       <h3 class="format-card__title" lang="en">Horseshoe</h3>
@@ -286,7 +298,10 @@
                     <div class="format-card__container">
                       <img
                         class="format-card__image"
-                        src="./images/Handlebar-format.jpg"
+                        srcset="
+                          /images/Handlebar-format.jpg 1x, images/double/Handlebar-format@2x.jpg 2x
+                          /"
+                        src="/images/Handlebar-format.jpg"
                         alt="Handlebar-format"
                       />
                       <h3 class="format-card__title" lang="en">Handlebar</h3>
@@ -304,7 +319,7 @@
                     <div class="format-card__container">
                       <img
                         class="format-card__image"
-                        src="./images/Walrus-format.jpg"
+                        src="/images/Walrus-format.jpg"
                         alt="Walrus-format"
                       />
                       <h3 class="format-card__title" lang="en">Walrus</h3>
@@ -333,7 +348,7 @@
               type="button"
             >
               <svg class="carousel-arrow" width="16" height="16">
-                <use href="../images/icons.svg#icon-Arrow"></use>
+                <use href="images/icons.svg#icon-Arrow"></use>
               </svg>
             </button>
           </div>
@@ -458,14 +473,14 @@
                 <li>
                   <a href="#">
                     <svg class="footer__address-icon" width="32" height="32">
-                      <use href="../images/icons.svg#icon-facebook"></use>
+                      <use href="images/icons.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <svg class="footer__address-icon" width="32" height="32">
-                      <use href="../images/icons.svg#icon-instagram"></use>
+                      <use href="images/icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
@@ -486,7 +501,7 @@
       <div class="modal-window">
         <button class="modal-window__btn-close modal-btn-close">
           <svg width="24" height="24">
-            <use href="/images/icons.svg#icon-close-button"></use>
+            <use href="images/icons.svg#icon-close-button"></use>
           </svg>
         </button>
         <h2 class="modal-window__title">Замовити дзвінок</h2>
@@ -548,11 +563,11 @@
         </form>
       </div>
     </div>
-    <script src="js/modal.js"></script>
-    <script src="js/mobile-menu.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/mobile-menu.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/formats-slider.js"></script>
+    <script src="/js/formats-slider.js"></script>
     <!-- Swiper -->
   </body>
 </html>

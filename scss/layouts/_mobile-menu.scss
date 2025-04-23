@@ -24,14 +24,14 @@
   &::before {
     width: 150px; /* Ширина декоративного элемента */
     height: 150px; /* Высота декоративного элемента */
-    background-image: url(/images/decor-text.png); /* Фоновое изображение */
+    background-image: url(../images/decor-text.png); /* Фоновое изображение */
     left: 0; /* Отступ справа */
   }
 
   &::after {
     width: 150px; /* Ширина декоративного элемента */
     height: 205px; /* Высота декоративного элемента */
-    background-image: url(/images/decor-bread-modal-window.png); /* Фоновое изображение */
+    background-image: url(../images/decor-bread-modal-window.png); /* Фоновое изображение */
     right: 0; /* Отступ справа */
   }
 

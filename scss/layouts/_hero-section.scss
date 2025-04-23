@@ -6,7 +6,7 @@
       rgba(18, 18, 17, 0.6) 58.46%,
       rgba(18, 18, 17, 0) 90.36%
     ),
-    url('/images/hero-section-background.jpg'); /* Путь к изображению */
+    url('../images/hero-section-background.jpg'); /* Путь к изображению */
   background-repeat: no-repeat; /* Повторение фона */
   background-position: center top; /* Позиция фона */
   background-size: cover; /* Размер фона */
@@ -25,7 +25,7 @@
         rgba(18, 18, 17, 0.6) 58.46%,
         rgba(18, 18, 17, 0) 90.36%
       ),
-      url('/images/hero-section-background@2x.jpg'); /* Путь к изображению */
+      url('../images/double/hero-section-background@2x.jpg'); /* Путь к изображению */
   }
 
   &__title {
